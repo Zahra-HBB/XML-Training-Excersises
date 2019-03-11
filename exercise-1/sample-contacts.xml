@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<co:contacts xmlns:co="http://www.cote.com.au/xml/contacts">
+    <co:contact>
+        <co:name>Bob Smith</co:name>
+        <co:company>ABC</co:company>
+        <co:jobTitle>Developer</co:jobTitle>
+        <co:contactNumbers>
+            <co:conatctNumber>
+                <co:number>0405742301</co:number>
+                <co:type>Mobile</co:type>
+            </co:conatctNumber>
+            <co:conatctNumber>
+                <co:number>0723123452</co:number>
+                <co:type>Home</co:type>
+            </co:conatctNumber>
+        </co:contactNumbers>
+        <co:addresses>
+            <co:address>
+                <co:addressLine>13 Big st, small</co:addressLine>
+                <co:type>Home</co:type>
+            </co:address>
+            <co:address>
+                <co:addressLine>14 Other st, small</co:addressLine>
+                <co:type>Business</co:type>
+            </co:address>
+        </co:addresses>
+        <co:emailAddress>a@b.com</co:emailAddress>
+    </co:contact>
+</co:contacts>
