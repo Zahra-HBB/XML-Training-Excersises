@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.w3schools.com" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cote.com.au/xml/contacts" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
     <xs:element name="contacts">
         <xs:complexType>
             <xs:sequence>
@@ -19,13 +19,18 @@
                                         <xs:element name="conatctNumber" minOccurs="1" maxOccurs="3">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="number" type="xs:string" />
-                                                    <xs:element name="type">
+                                                    <xs:element name="number">
                                                         <xs:simpleType>
                                                             <xs:restriction base="xs:string">
                                                                 <xs:length value="10" />
                                                                 <!-- Ex: 0312345345 -->
                                                                 <xs:pattern value="[0-9]{10}" />
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="type">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
                                                                 <xs:enumeration value="Mobile" />
                                                                 <xs:enumeration value="Home" />
                                                                 <xs:enumeration value="Work" />
