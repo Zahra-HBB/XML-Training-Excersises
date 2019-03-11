@@ -86,6 +86,7 @@
                                         <xs:element name="address" minOccurs="1" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:choice>
+                                                    <!-- HOME ADDRESS -->
                                                     <xs:element name="Home">
                                                         <xs:complexType>
                                                             <xs:sequence>
@@ -99,10 +100,17 @@
                                                                         </xs:restriction>
                                                                     </xs:simpleType>
                                                                 </xs:element>
-                                                                <xs:element name="state" type="xs:string" />
+                                                                <xs:element name="state" >
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:pattern value="NSW|VIC|QLD|WA|SA|NT|ACT" />
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
+                                                    <!-- BUSINESS ADDRESS -->
                                                     <xs:element name="Business">
                                                         <xs:complexType>
                                                             <xs:sequence>
@@ -116,7 +124,13 @@
                                                                         </xs:restriction>
                                                                     </xs:simpleType>
                                                                 </xs:element>
-                                                                <xs:element name="state" type="xs:string" />
+                                                                <xs:element name="state" >
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:pattern value="NSW|VIC|QLD|WA|SA|NT|ACT" />
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
                                                                 <xs:element name="department" type="xs:string" minOccurs="0" />
                                                                 <xs:element name="buildingName" type="xs:string" minOccurs="0" />
                                                                 <xs:element name="ABN" minOccurs="0">
