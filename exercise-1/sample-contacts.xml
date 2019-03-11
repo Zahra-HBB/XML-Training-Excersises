@@ -2,11 +2,11 @@
 <co:contacts xmlns:co="http://www.cote.com.au/xml/contacts">
     <co:contact>
         <co:name>Bob Smith</co:name>
-        <co:company>ABC</co:company>
+        <co:company>DataModel</co:company>
         <co:jobTitle>Developer</co:jobTitle>
         <co:contactNumbers>
             <co:conatctNumber>
-                <co:number>0405742301</co:number>
+                <co:number>0405342301</co:number>
                 <co:type>Mobile</co:type>
             </co:conatctNumber>
             <co:conatctNumber>
@@ -17,7 +17,7 @@
         <co:addresses>
             <co:address>
                 <co:Home>
-                    <co:streetAddress>13 Big st small </co:streetAddress>
+                    <co:streetAddress>13,Big st,small </co:streetAddress>
                     <co:suburb>Hawthorn</co:suburb>
                     <co:postCode>3122</co:postCode>
                     <co:state>VIC</co:state>
@@ -25,14 +25,14 @@
             </co:address>
             <co:address>
                 <co:Business>
-                    <co:streetAddress>13 bruke st collins </co:streetAddress>
-                    <co:suburb>richmond</co:suburb>
-                    <co:postCode>3120</co:postCode>
+                    <co:streetAddress>18,bruke st,collins </co:streetAddress>
+                    <co:suburb>Richmond</co:suburb>
+                    <co:postCode>2120</co:postCode>
                     <co:state>NSW</co:state>
                     <co:ABN>12345678987</co:ABN>
                 </co:Business>
             </co:address>
         </co:addresses>
-        <co:emailAddress>a@b.com</co:emailAddress>
+        <co:emailAddress>BobSmith@gmail.com</co:emailAddress>
     </co:contact>
 </co:contacts>
