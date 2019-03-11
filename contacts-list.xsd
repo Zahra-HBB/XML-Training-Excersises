@@ -62,7 +62,13 @@
                                 </xs:complexType>
                             </xs:element>
                             <!-- EMAIL ADDRESS -->
-                            <xs:element name="emailAddress" type="xs:string" />
+                            <xs:element name="emailAddress">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[\w-]+@([\w-]+\.)+[\w-]+" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
