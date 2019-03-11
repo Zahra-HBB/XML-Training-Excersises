@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rcp:collection xmlns:rcp="http://www.cote.com.au/xml/recipes">
+    <!-- Document Description -->
+    <rcp:element name="description" type="string" />
+    <!-- RECEPIES -->
+    <rcp:complexType name="recipes">
+        <rcp:sequence>
+            <rcp:complexType title="recipe" maxOccurs="unbounded" mixed="true">
+                <rcp:sequence>
+                    <!-- ID -->
+                    <rcp:element name="id" type="string" />
+                    <!-- TITLE -->
+                    <rcp:element name="title" type="string" />
+                    <!-- DATE -->
+                    <rcp:element name="date" type="date" />
+                    <!-- INGREDIENTS -->
+                    <rcp:complexType name="ingredients">
+                        <rcp:sequence>
+                            <rcp:complexType name="ingredient" minOccurs="2">
+                                <rcp:sequence>
+                                    <rcp:element name="name" type="xs:string" />
+                                    <rcp:element name="amount" type="xs:decimal" minOccurs="0" />
+                                    <rcp:element name="unit" type="xs:string" minOccurs="0" />
+                                </rcp:sequence>
+                            </rcp:complexType>
+                        </rcp:sequence>
+                    </rcp:complexType>
+                    <!-- PREPERATION -->
+                    <rcp:complexType name="preparationSteps">
+                        <sequence>
+                            <rcp:element name="step" minOccurs="5" maxOccurs="10" />
+                        </sequence>
+                    </rcp:complexType>
+                    <!-- COMMENT -->
+                    <rcp:element name="comment" type="xs:string" minOccurs="0" />
+                    <!-- NUTRITIONS -->
+                    <rcp:comlexType name="nutritions">
+                        <rcp:sequence>
+                            <rcp:complexType name="nutrition" minOccurs="0">
+                                <rcp:sequence>
+                                    <rcp:element name="calories" type="xs:inreger" />
+                                    <rcp:simpleType name="fat">
+                                        <rcp:restriction base="xs:decimal">
+                                            <rcp:pattern value="[0-100]{3}+%" />
+                                        </rcp:restriction>
+                                    </rcp:simpleType>
+                                    <rcp:simpleType name="carbohydrates">
+                                        <rcp:restriction base="xs:decimal">
+                                            <rcp:pattern value="[0-100]{3}+%" />
+                                        </rcp:restriction>
+                                    </rcp:simpleType>
+                                    <rcp:simpleType name="protein">
+                                        <rcp:restriction base="xs:decimal">
+                                            <rcp:pattern value="[0-100]{3}+%" />
+                                        </rcp:restriction>
+                                    </rcp:simpleType>
+                                    <rcp:simpleType name="alcohol">
+                                        <rcp:restriction base="xs:decimal">
+                                            <rcp:pattern value="[0-100]{3}+%" />
+                                        </rcp:restriction>
+                                    </rcp:simpleType>
+                                </rcp:sequence>
+                            </rcp:complexType>
+                        </rcp:sequence>
+                    </rcp:comlexType>
+                    <!-- RELATED -->
+                    <rcp:element name="related" type="string" minOccurs="0" />
+                </rcp:sequence>
+            </rcp:complexType>
+        </rcp:sequence>
+    </rcp:complexType>
+</rcp:collection>
