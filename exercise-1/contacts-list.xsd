@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cote.com.au/xml/contacts" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cote.com.au/xml/contacts" xmlns="https://www.w3schools.com" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <!-- Address Definition -->
+    <!-- <xs:complexType name="homeAddress">
+        <xs:sequence>
+            <xs:element name="addressLine-1" type="xs:string" />
+            <xs:element name="addressLine-2" type="xs:string" minOccurs="0" />
+            <xs:element name="suburb" type="xs:string" />
+            <xs:element name="postCode">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="4" />
+                        <xs:pattern value="[0-9]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="state" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="bussinessAddress">
+        <xs:complexContent>
+            <xs:extension base="homeAddress">
+                <xs:sequence>
+                    <xs:element name="department" type="xs:string" minOccurs="0" />
+                    <xs:element name="buildingName" type="xs:string" minOccurs="0" />
+                    <xs:element name="ABN" minOccurs="0">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:length value="11" />
+                                <xs:pattern value="[0-9]" />
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType> -->
     <xs:element name="contacts">
         <xs:complexType>
             <xs:sequence>
@@ -46,21 +81,56 @@
                             </xs:element>
                             <!-- ADDRESS -->
                             <xs:element name="addresses">
-                                <xs:complexType>
+                                <xs:complexType mixed="true">
                                     <xs:sequence>
                                         <xs:element name="address" minOccurs="1" maxOccurs="unbounded">
                                             <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="addressLine" type="xs:string" />
-                                                    <xs:element name="type">
-                                                        <xs:simpleType>
-                                                            <xs:restriction base="xs:string">
-                                                                <xs:enumeration value="Home" />
-                                                                <xs:enumeration value="Business" />
-                                                            </xs:restriction>
-                                                        </xs:simpleType>
+                                                <xs:choice>
+                                                    <xs:element name="Home">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="streetAddress" type="xs:string" />
+                                                                <xs:element name="suburb" type="xs:string" />
+                                                                <xs:element name="postCode">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:length value="4" />
+                                                                            <xs:pattern value="[0-9]{4}" />
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                                <xs:element name="state" type="xs:string" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
                                                     </xs:element>
-                                                </xs:sequence>
+                                                    <xs:element name="Business">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="streetAddress" type="xs:string" />
+                                                                <xs:element name="suburb" type="xs:string" />
+                                                                <xs:element name="postCode">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:length value="4" />
+                                                                            <xs:pattern value="[0-9]{4}" />
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                                <xs:element name="state" type="xs:string" />
+                                                                <xs:element name="department" type="xs:string" minOccurs="0" />
+                                                                <xs:element name="buildingName" type="xs:string" minOccurs="0" />
+                                                                <xs:element name="ABN" minOccurs="0">
+                                                                    <xs:simpleType>
+                                                                        <xs:restriction base="xs:string">
+                                                                            <xs:length value="11" />
+                                                                            <xs:pattern value="[0-9]{11}" />
+                                                                        </xs:restriction>
+                                                                    </xs:simpleType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:choice>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>

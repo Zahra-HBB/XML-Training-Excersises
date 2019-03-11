@@ -16,12 +16,21 @@
         </co:contactNumbers>
         <co:addresses>
             <co:address>
-                <co:addressLine>13 Big st, small</co:addressLine>
-                <co:type>Home</co:type>
+                <co:Home>
+                    <co:streetAddress>13 Big st small </co:streetAddress>
+                    <co:suburb>Hawthorn</co:suburb>
+                    <co:postCode>3122</co:postCode>
+                    <co:state>VIC</co:state>
+                </co:Home>
             </co:address>
             <co:address>
-                <co:addressLine>14 Other st, small</co:addressLine>
-                <co:type>Business</co:type>
+                <co:Business>
+                    <co:streetAddress>13 bruke st collins </co:streetAddress>
+                    <co:suburb>richmond</co:suburb>
+                    <co:postCode>3120</co:postCode>
+                    <co:state>VIC</co:state>
+                    <co:ABN>12345678987</co:ABN>
+                </co:Business>
             </co:address>
         </co:addresses>
         <co:emailAddress>a@b.com</co:emailAddress>
