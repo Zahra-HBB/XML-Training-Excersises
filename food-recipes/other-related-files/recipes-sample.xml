@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <collection xmlns="http://www.cote.com.au/xml/recipes"> -->
+ <collection> 
+  <description>This is Persian recipies</description>
+  <recipes>
+    <recipe>
+      <id>Top1</id>
+      <title>Qorme Sabzi(stew)</title>
+      <date>2019-03-13</date>
+      <ingredients>
+        <ingredient>
+          <name>mixed persian vegtables (parsley,coriander,fungreek,persian leek,spinach)</name>
+          <amount>400</amount>
+          <unit>grams</unit>
+        </ingredient>
+        <ingredient>
+          <name>lamb diced</name>
+          <amount>300</amount>
+          <unit>grams</unit>
+        </ingredient>
+        <ingredient>
+          <name>onion</name>
+          <amount>1</amount>
+        </ingredient>
+        <ingredient>
+          <name>red beens</name>
+          <amount>200</amount>
+          <unit>grams</unit>
+        </ingredient>
+        <ingredient>
+          <name>dried lime</name>
+          <amount>3</amount>
+        </ingredient>
+        <ingredient>
+          <name>turmeric</name>
+          <amount>1.5</amount>
+          <unit>tea spoon</unit>
+        </ingredient>
+        <ingredient>
+          <name>salt</name>
+          <amount>2</amount>
+          <unit>tea spoon</unit>
+        </ingredient>
+        <ingredient>
+          <name>water</name>
+          <amount>2</amount>
+          <unit>cups</unit>
+        </ingredient>
+        <ingredient>
+          <name>rice</name>
+          <amount>3</amount>
+          <unit>cups</unit>
+        </ingredient>
+      </ingredients>
+      <preparationSteps>
+        <step>Dice onion and put it in hot extra olive oil until it gets a caramelise colour</step>
+        <step>Add turmaric to them</step>
+        <step>Add meat and red beens to the onions</step>
+        <step>Add water to the ingredients and let them boil slowly for 1.5 hours</step>
+        <step>Add vegtables,dried limes, salt to your dish</step>
+        <step>Let all ingredients boil for another 1 hour </step>
+        <step>Make the rice as usuall. When the stew is ready you can have it with the rice and 
+             have some persian salad or yoghurt beside your "Qorme Sabzi"</step>
+      </preparationSteps>
+      <comment>Qorme Sabzi is one of the most delisious Persian foods that everyone should try it</comment>
+      <nutritions>
+        <nutrition>
+          <calories>400</calories>
+          <fat>23</fat>
+          <protein>50</protein>
+        </nutrition>
+      </nutritions>
+      <related ref="qurme sabzi">this goes very well with persian salad or yoghurt</related>
+    </recipe>
+  </recipes>
+</collection>

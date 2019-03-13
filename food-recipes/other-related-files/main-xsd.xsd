@@ -1,0 +1,107 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.cote.com.au/xml/recipes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="collection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="description" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="recipe" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="title"/>
+              <xs:element type="xs:string" name="date"/>
+              <xs:element name="ingredient" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="ingredient" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="ingredient" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element name="ingredient" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                                        <xs:attribute type="xs:string" name="amount" use="optional"/>
+                                        <xs:attribute type="xs:string" name="unit" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="preparation" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="step" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="name" use="optional"/>
+                              <xs:attribute type="xs:string" name="amount" use="optional"/>
+                              <xs:attribute type="xs:string" name="unit" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="preparation" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="step" maxOccurs="unbounded" minOccurs="0"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                        <xs:attribute type="xs:string" name="amount" use="optional"/>
+                        <xs:attribute type="xs:string" name="unit" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="preparation" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="step" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                  <xs:attribute type="xs:string" name="amount" use="optional"/>
+                  <xs:attribute type="xs:string" name="unit" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="preparation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="step" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="comment" minOccurs="0"/>
+              <xs:element name="nutrition">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:short" name="calories" use="optional"/>
+                      <xs:attribute type="xs:string" name="fat" use="optional"/>
+                      <xs:attribute type="xs:string" name="carbohydrates" use="optional"/>
+                      <xs:attribute type="xs:string" name="protein" use="optional"/>
+                      <xs:attribute type="xs:string" name="alcohol" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="related" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="ref"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
