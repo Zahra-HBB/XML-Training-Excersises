@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
 <collection xmlns="http://www.cote.com.au/xml/recipes">
-<!-- <collection> -->
-  <description>This is Persian recipies</description>
+  <description>This is a Persian recipe</description>
   <recipes>
     <recipe>
       <id>Top1</id>
@@ -65,12 +65,11 @@
       <comment>Qorme Sabzi is one of the most delisious Persian foods that everyone should try it</comment>
       <nutritions>
         <nutrition>
-          <calories>400</calories>
-          <fat>23</fat>
-          <protein>50</protein>
+          <calories>3520</calories>
+          <fat>66</fat>
         </nutrition>
       </nutritions>
-      <related ref="qurme sabzi">this goes very well with persian salad or yoghurt</related>
+      <related ref="QS">this goes very well with persian salad or yoghurt</related>
     </recipe>
   </recipes>
 </collection>
