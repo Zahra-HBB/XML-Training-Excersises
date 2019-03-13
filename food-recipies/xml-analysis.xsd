@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cote.com.au/xml/recipes" 
+            version="http://www.cote.com.au/xml/recipes/1.0"
+            attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xsd:element name="collection">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <!-- Document Description -->
+                <xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+                <!-- RECEPIES -->
+                <xsd:element name="recipes" minOccurs="0">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="recipe" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <!-- ID -->
+                                        <xsd:element name="id" type="xsd:string" minOccurs="1"/>
+                                        <!-- TITLE -->
+                                        <xsd:element name="title" type="xsd:string" minOccurs="1" />
+                                        <!-- DATE -->
+                                        <xsd:element name="date" type="xsd:date" minOccurs="1"/>
+                                        <!-- INGREDIENTS -->
+                                        <xsd:element name="ingredients" maxOccurs="unbounded">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="ingredient" minOccurs="2" maxOccurs="unbounded">
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element name="name" type="xsd:string" minOccurs="1"/>
+                                                                <xsd:element name="amount" type="xsd:decimal" minOccurs="0" />
+                                                                <xsd:element name="unit" type="xsd:string" minOccurs="0" />
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <!-- PREPERATION -->
+                                        <xsd:element name="preparationSteps" minOccurs="1">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="step" type="xsd:string" minOccurs="5" maxOccurs="10" />
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <!-- COMMENT -->
+                                        <xsd:element name="comment" type="xsd:string" minOccurs="0" />
+                                        <!-- NUTRITIONS -->
+                                        <xsd:element name="nutritions">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="nutrition" minOccurs="0">
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element name="calories" type="xsd:integer" minOccurs="0"/>
+                                                                <xsd:element name="fat" minOccurs="0">
+                                                                    <xsd:simpleType>
+                                                                        <xsd:restriction base="xsd:integer">
+                                                                            <xsd:minInclusive value="0"/>
+                                                                            <xsd:maxInclusive value="100"/>
+                                                                        </xsd:restriction>
+                                                                    </xsd:simpleType>
+                                                                </xsd:element>
+                                                                <xsd:element name="carbohydrates" minOccurs="0">
+                                                                    <xsd:simpleType>
+                                                                        <xsd:restriction base="xsd:integer">
+                                                                            <xsd:minInclusive value="0"/>
+                                                                            <xsd:maxInclusive value="100"/>
+                                                                        </xsd:restriction>
+                                                                    </xsd:simpleType>
+                                                                </xsd:element>
+                                                                <xsd:element name="protein" minOccurs="0">
+                                                                    <xsd:simpleType>
+                                                                        <xsd:restriction base="xsd:integer">
+                                                                            <xsd:minInclusive value="0"/>
+                                                                            <xsd:maxInclusive value="100"/>
+                                                                        </xsd:restriction>
+                                                                    </xsd:simpleType>
+                                                                </xsd:element>
+                                                                <xsd:element name="alcohol" minOccurs="0">
+                                                                    <xsd:simpleType>
+                                                                        <xsd:restriction base="xsd:integer">
+                                                                            <xsd:minInclusive value="0"/>
+                                                                            <xsd:maxInclusive value="100"/>
+                                                                        </xsd:restriction>
+                                                                    </xsd:simpleType>
+                                                                </xsd:element>
+                                                            </xsd:sequence>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <!-- RELATED -->
+                                        <xsd:element name="related" minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:simpleContent>
+                                                    <xsd:extension base="xsd:string">
+                                                        <xsd:attribute name="ref" type="xsd:string" />
+                                                    </xsd:extension>
+                                                </xsd:simpleContent>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
