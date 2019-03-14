@@ -8,9 +8,48 @@
       <date>2019-03-13</date>
       <ingredients>
         <ingredient>
-          <name>mixed persian vegtables (parsley,coriander,fungreek,persian leek,spinach)</name>
-          <amount>400</amount>
-          <unit>grams</unit>
+          <name>Stew</name>
+            <ingredients>
+              <ingredient>
+                <name>mixed persian vegtables</name>
+                <amount>400</amount>
+                <unit>grams</unit>
+                  <ingredients>
+                    <ingredient>
+                      <name>parsley</name>
+                      <amount>100</amount>
+                      <unit>grams</unit>
+                    </ingredient>
+                    <ingredient>
+                      <name>coriander</name>
+                      <amount>100</amount>
+                      <unit>grams</unit>
+                    </ingredient>
+                    <ingredient>
+                      <name>fungreek</name>
+                      <amount>50</amount>
+                      <unit>grams</unit>
+                    </ingredient>
+                    <ingredient>
+                      <name>persian leek</name>
+                      <amount>100</amount>
+                      <unit>grams</unit>
+                    </ingredient>
+                    <ingredient>
+                      <name>spinach</name>
+                      <amount>50</amount>
+                      <unit>grams</unit>
+                    </ingredient>
+                    <steps>
+                        <step>Dice all vegtables together</step>
+                        <step>Put olive intho the pan</step>
+                        <step>Let the oil get hot</step>
+                        <step>Put vegtables into the hot oil on the low heat</step>
+                        <step>let them boil until their colour chenge a bit</step>
+                    </steps>
+                  </ingredients>
+              </ingredient>
+            </ingredients>
         </ingredient>
         <ingredient>
           <name>lamb diced</name>
@@ -51,7 +90,7 @@
           <unit>cups</unit>
         </ingredient>
       </ingredients>
-      <preparationSteps>
+      <steps>
         <step>Dice onion and put it in hot extra olive oil until it gets a caramelise colour</step>
         <step>Add turmaric to them</step>
         <step>Add meat and red beens to the onions</step>
@@ -60,14 +99,12 @@
         <step>Let all ingredients boil for another 1 hour </step>
         <step>Make the rice as usuall. When the stew is ready you can have it with the rice and 
              have some persian salad or yoghurt beside your "Qorme Sabzi"</step>
-      </preparationSteps>
+      </steps>
       <comment>Qorme Sabzi is one of the most delisious Persian foods that everyone should try it</comment>
-      <nutritions>
-        <nutrition>
-          <calories>3520</calories>
-          <fat>66</fat>
-        </nutrition>
-      </nutritions>
+      <nutrition>
+        <calories>3520</calories>
+        <fat>66</fat>
+      </nutrition>
       <related ref="QS">this goes very well with persian salad or yoghurt</related>
     </recipe>
   </recipes>
