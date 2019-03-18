@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inboundMusicCollection xmlns="http://www.music-mission.com.au/xml/common">
+    <userId>97e28011-a4fd-4cb8-bac1-960bdda24f50</userId>
+    <user>
+        <firstName>Bob</firstName>
+        <lastName>Smith</lastName>
+    </user>
+    <album>
+        <albumId>d8494664-1773-4207-9462-a752d8fd8dc2</albumId>
+        <albumInfo>
+            <albumName>Hope</albumName>
+            <artists>
+                <artistInfo>
+                    <artistFirstName>Jody</artistFirstName>
+                    <artistLastName>Berry</artistLastName>
+                </artistInfo>
+            </artists>
+            <tracks>
+                <trackInfo>
+                    <trackId>6d3d24ca-8d4f-4943-86e8-ea9748fa2f12</trackId>
+                    <trackName>Tomorrow</trackName>
+                    <trackLength>4.50</trackLength>
+                </trackInfo>
+                <trackInfo>
+                    <trackId>13c9c12e-5acd-4d80-9d9c-559ebcdd608d</trackId>
+                    <trackName>HappyMe</trackName>
+                    <trackLength>5.00</trackLength>
+                </trackInfo>
+            </tracks>
+        </albumInfo>
+    </album>
+</inboundMusicCollection>
