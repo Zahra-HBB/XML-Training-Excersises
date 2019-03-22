@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flyBuysLetter xmlns="https://www.w3schools.com">
+    <sortLetterBarcode>2917524039</sortLetterBarcode>
+    <letterUniqueBarcode>825939391</letterUniqueBarcode>
+    <prefix>Miss</prefix>
+    <firstName>Tina</firstName>
+    <lastName>TMDELTORRE</lastName>
+    <letterDate>2010-06-28</letterDate>
+    <membershipNumber>3301742133151992</membershipNumber>
+    <addresse>
+        <addressLine1>36 HARVEY AVE</addressLine1>
+        <suburb>NETLEY</suburb>
+        <state>SA</state>
+        <postCode>5037</postCode>
+    </addresse>
+    <voucherName>Village Cinemas Gold Class</voucherName>
+    <validCinemas>Village, Greater Union and Birch Carroll and Coyle Gold Class locations</validCinemas>
+    <rewardProvider>VILLAGE CINEMAS</rewardProvider>
+    <rewardType>Village Cinemas Gold Class</rewardType>
+    <numberOfVouchers>
+        <Count>4</Count>
+        <validPerson>Adult</validPerson>
+    </numberOfVouchers>
+    <numberOfRewards>1</numberOfRewards>
+    <rewardReferenceNumber>W6596040</rewardReferenceNumber>
+</flyBuysLetter>
