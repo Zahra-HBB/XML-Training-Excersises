@@ -18,8 +18,14 @@
     <rewardProvider>VILLAGE CINEMAS</rewardProvider>
     <rewardType>Village Cinemas Gold Class</rewardType>
     <numberOfVouchers>
-        <Count>4</Count>
-        <validPerson>Adult</validPerson>
+        <vouchers>
+            <Count>3</Count>
+            <validPerson>Adult</validPerson>
+        </vouchers>
+        <vouchers>
+            <Count>3</Count>
+            <validPerson>Child</validPerson>
+        </vouchers>
     </numberOfVouchers>
     <numberOfRewards>1</numberOfRewards>
     <rewardReferenceNumber>W6596040</rewardReferenceNumber>
