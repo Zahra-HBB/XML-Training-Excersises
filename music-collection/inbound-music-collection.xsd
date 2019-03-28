@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.music-mission.com.au/xml/common" targetNamespace="https://www.w3schools.com" version="http://www.music-mission.com.au/1.0" xmlns="https://www.w3schools.com" elementFormDefault="qualified">
-    <xsd:element name="inboundMusicCollection">
-        <xsd:complexType mixed="true">
-            <xsd:sequence>
-                <xsd:element name="userId" type="common:uniqueId" minOccurs="1" />
-                <xsd:element name="user" type="common:usersInfo" minOccurs="1" />
-                <xsd:element name="album">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="albumId" type="common:uniqueId" minOccurs="1" />
-                            <xsd:element name="albumInfo" type="common:albumInfo" minOccurs="1" maxOccurs="unbounded" />
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.music-mission.com.au/xml/common" xmlns="https://www.w3schools.com" targetNamespace="https://www.w3schools.com" elementFormDefault="qualified" version="http://www.music-mission.com.au/1.0">
+	<xsd:import namespace="http://www.music-mission.com.au/xml/common" schemaLocation="common-types.xsd" />
+	<xsd:element name="inboundMusicCollection">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:element name="userId" type="common:uniqueId" minOccurs="1" />
+				<xsd:element name="user" type="common:usersInfo" minOccurs="1" />
+				<xsd:element name="album">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="albumId" type="common:uniqueId" minOccurs="1" />
+							<xsd:element name="albumInfo" type="common:albumInfo" minOccurs="1" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
 </xsd:schema>
