@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<collection xmlns="http://www.cote.com.au/xml/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cote.com.au/xml/recipes file:///D:/Source/Repos/XML-Training-Excersises/food-recipes/recipe-schema.xsd">
+<collection xmlns="http://www.cote.com.au/xml/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cote.com.au/xml/recipes recipe-schema.xsd">
 	<description>Some recipes used in the XML tutorial.</description>
 	<recipes>
 		<recipe>
