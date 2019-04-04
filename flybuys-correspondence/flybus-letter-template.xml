@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<flyBuysLetter xmlns="https://www.w3schools.com">
-    <sortLetterBarcode>2917524039</sortLetterBarcode>
-    <letterUniqueBarcode>825939391</letterUniqueBarcode>
+<flyBuysLetter xmlns="http://www.cote.com.au/flybuys" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cote.com.au/flybuys flybuys-letter-template.xsd">
     <prefix>Miss</prefix>
     <firstName>Tina</firstName>
     <lastName>TMDELTORRE</lastName>
