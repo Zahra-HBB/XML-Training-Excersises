@@ -1,111 +1,117 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fb="http://www.cote.com.au/flybuys" targetNamespace="http://www.cote.com.au/flybuys" version="http://flyBuys/XMLSchema/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xsd:element name="flyBuysLetter">
-        <xsd:complexType mixed="true">
-            <xsd:sequence>
-                <xsd:element name="sortLetterBarcode" type="fb:barCodeFormat" minOccurs="0" />
-                <xsd:element name="letterUniqueBarcode" type="fb:barCodeFormat" minOccurs="0" />
-                <xsd:element name="prefix" minOccurs="1">
-                    <xsd:simpleType>
-                        <xsd:restriction base="xsd:string">
-                            <xsd:enumeration value="Mrs." />
-                            <xsd:enumeration value="Mr." />
-                            <xsd:enumeration value="Ms." />
-                            <xsd:enumeration value="Miss" />
-                        </xsd:restriction>
-                    </xsd:simpleType>
-                </xsd:element>
-                <xsd:element name="firstName" type="xsd:string" minOccurs="0" />
-                <xsd:element name="lastName" type="xsd:string" minOccurs="1" />
-                <xsd:element name="letterDate" type="xsd:date" minOccurs="1" />
-                <xsd:element name="membershipNumber" minOccurs="1">
-                    <xsd:simpleType>
-                        <xsd:restriction base="xsd:string">
-                            <xsd:pattern value="[0-9]{16}" />
-                        </xsd:restriction>
-                    </xsd:simpleType>
-                </xsd:element>
-                <xsd:element name="addresse" minOccurs="1">
-                    <xsd:complexType mixed="true">
-                        <xsd:sequence>
-                            <xsd:element name="addressLine1" type="xsd:string" minOccurs="1" />
-                            <xsd:element name="addressLine2" type="xsd:string" minOccurs="0" />
-                            <xsd:element name="suburb" type="xsd:string" minOccurs="1" />
-                            <xsd:element name="state" minOccurs="1">
-                                <xsd:simpleType>
-                                    <xsd:restriction base="xsd:string">
-                                        <xsd:pattern value="NSW|VIC|QLD|WA|SA|NT|ACT" />
-                                    </xsd:restriction>
-                                </xsd:simpleType>
-                            </xsd:element>
-                            <xsd:element name="postCode" minOccurs="1">
-                                <xsd:simpleType>
-                                    <xsd:restriction base="xsd:string">
-                                        <xsd:pattern value="[0-9]{4}" />
-                                    </xsd:restriction>
-                                </xsd:simpleType>
-                            </xsd:element>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="voucherName" type="xsd:string" minOccurs="1" />
-                <xsd:element name="validCinemas" type="xsd:string" minOccurs="1" />
-                <xsd:element name="rewardProvider" type="xsd:string" minOccurs="0" />
-                <xsd:element name="rewardType" type="xsd:string" minOccurs="0" />
-                <xsd:element name="numberOfVouchers" minOccurs="1">
-                    <xsd:complexType>
-                        <xsd:sequence>
-                            <xsd:element name="vouchers" minOccurs="1" maxOccurs="2">
-                                <xsd:complexType>
-                                    <xsd:sequence>
-                                        <xsd:element name="Count" minOccurs="1">
-                                            <xsd:simpleType>
-                                                <xsd:restriction base="xsd:integer">
-                                                    <xsd:minInclusive value="1" />
-                                                    <xsd:maxInclusive value="20" />
-                                                </xsd:restriction>
-                                            </xsd:simpleType>
-                                        </xsd:element>
-                                        <xsd:element name="validPerson" minOccurs="0">
-                                            <xsd:simpleType>
-                                                <xsd:restriction base="xsd:string">
-                                                    <xsd:enumeration value="Adult" />
-                                                    <xsd:enumeration value="Child" />
-                                                </xsd:restriction>
-                                            </xsd:simpleType>
-                                        </xsd:element>
-                                    </xsd:sequence>
-                                </xsd:complexType>
-                            </xsd:element>
-                        </xsd:sequence>
-                    </xsd:complexType>
-                </xsd:element>
-                <xsd:element name="numberOfRewards" minOccurs="0">
-                    <xsd:simpleType>
-                        <xsd:restriction base="xsd:integer">
-                            <xsd:minInclusive value="1" />
-                            <xsd:maxInclusive value="20" />
-                        </xsd:restriction>
-                    </xsd:simpleType>
-                </xsd:element>
-                <xsd:element name="rewardReferenceNumber" minOccurs="1">
-                    <xsd:simpleType>
-                        <xsd:restriction base="xsd:string">
-                            <xsd:pattern value="[W][0-9]{7}" />
-                        </xsd:restriction>
-                    </xsd:simpleType>
-                </xsd:element>
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <!-- ************************************************************************************************ -->
-    <!--                                            GENERAL DEFENITIONS                                   -->
-    <!-- ************************************************************************************************ -->
-    <!-- Defenition of BARCODE -->
-    <xsd:simpleType name="barCodeFormat">
-        <xsd:restriction base="xsd:string">
-            <xsd:minLength value="52" />
-            <xsd:maxLength value="67" />
-        </xsd:restriction>
-    </xsd:simpleType>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fb="http://www.cote.com.au/flybuys" targetNamespace="http://www.cote.com.au/flybuys" elementFormDefault="qualified" attributeFormDefault="unqualified" version="http://flyBuys/XMLSchema/1.0">
+	<xsd:element name="root">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="flyBuysLetter">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="sortLetterBarcode" type="fb:barCodeFormat" minOccurs="0" />
+							<xsd:element name="letterUniqueBarcode" type="fb:barCodeFormat" minOccurs="0" />
+							<xsd:element name="prefix" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="Mrs." />
+										<xsd:enumeration value="Mr." />
+										<xsd:enumeration value="Ms." />
+										<xsd:enumeration value="Miss" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="firstName" type="xsd:string" minOccurs="0" />
+							<xsd:element name="lastName" type="xsd:string" minOccurs="1" />
+							<xsd:element name="letterDate" type="xsd:date" minOccurs="1" />
+							<xsd:element name="membershipNumber" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:pattern value="[0-9]{16}" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="addresse" minOccurs="1">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="addressLine1" type="xsd:string" minOccurs="1" />
+										<xsd:element name="addressLine2" type="xsd:string" minOccurs="0" />
+										<xsd:element name="suburb" type="xsd:string" minOccurs="1" />
+										<xsd:element name="state" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:pattern value="NSW|VIC|QLD|WA|SA|NT|ACT" />
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="postCode" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:pattern value="[0-9]{4}" />
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="voucherName" type="xsd:string" minOccurs="1" />
+							<xsd:element name="validCinemas" type="xsd:string" minOccurs="1" />
+							<xsd:element name="rewardProvider" type="xsd:string" minOccurs="0" />
+							<xsd:element name="rewardType" type="xsd:string" minOccurs="0" />
+							<xsd:element name="numberOfVouchers" minOccurs="1">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="vouchers" minOccurs="1" maxOccurs="2">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="Count" minOccurs="1">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:integer">
+																<xsd:minInclusive value="1" />
+																<xsd:maxInclusive value="20" />
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+													<xsd:element name="validPerson" minOccurs="0">
+														<xsd:simpleType>
+															<xsd:restriction base="xsd:string">
+																<xsd:enumeration value="Adult" />
+																<xsd:enumeration value="Child" />
+															</xsd:restriction>
+														</xsd:simpleType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="numberOfRewards" minOccurs="0">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:integer">
+										<xsd:minInclusive value="1" />
+										<xsd:maxInclusive value="20" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="rewardReferenceNumber" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:pattern value="[W][0-9]{7}" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ************************************************************************************************ -->
+	<!--                                            GENERAL DEFENITIONS                                   -->
+	<!-- ************************************************************************************************ -->
+	<!-- Defenition of BARCODE -->
+	<xsd:simpleType name="barCodeFormat">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="52" />
+			<xsd:maxLength value="67" />
+		</xsd:restriction>
+	</xsd:simpleType>
 </xsd:schema>

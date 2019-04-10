@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<flyBuysLetter xmlns="http://www.cote.com.au/flybuys" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cote.com.au/flybuys flybuys-letter-template.xsd">
-    <prefix>Miss</prefix>
-    <firstName>Tina</firstName>
-    <lastName>TMDELTORRE</lastName>
-    <letterDate>2010-06-28</letterDate>
-    <membershipNumber>3301742133151992</membershipNumber>
-    <addresse>
-        <addressLine1>36 HARVEY AVE</addressLine1>
-        <suburb>NETLEY</suburb>
-        <state>SA</state>
-        <postCode>5037</postCode>
-    </addresse>
-    <voucherName>Village Cinemas Gold Class</voucherName>
-    <validCinemas>Village, Greater Union and Birch Carroll and Coyle Gold Class locations</validCinemas>
-    <rewardProvider>VILLAGE CINEMAS</rewardProvider>
-    <rewardType>Village Cinemas Gold Class</rewardType>
-    <numberOfVouchers>
-        <vouchers>
-            <Count>3</Count>
-            <validPerson>Adult</validPerson>
-        </vouchers>
-        <vouchers>
-            <Count>3</Count>
-            <validPerson>Child</validPerson>
-        </vouchers>
-    </numberOfVouchers>
-    <numberOfRewards>1</numberOfRewards>
-    <rewardReferenceNumber>W6596040</rewardReferenceNumber>
-</flyBuysLetter>
+<root xmlns="http://www.cote.com.au/flybuys" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cote.com.au/flybuys flybuys-letter-template.xsd">
+    <flyBuysLetter>
+        <prefix>Miss</prefix>
+        <firstName>Tina</firstName>
+        <lastName>TMDELTORRE</lastName>
+        <letterDate>2010-06-28</letterDate>
+        <membershipNumber>3301742133151992</membershipNumber>
+        <addresse>
+            <addressLine1>36 HARVEY AVE</addressLine1>
+            <suburb>NETLEY</suburb>
+            <state>SA</state>
+            <postCode>5037</postCode>
+        </addresse>
+        <voucherName>Village Cinemas Gold Class</voucherName>
+        <validCinemas>Village, Greater Union and Birch Carroll and Coyle Gold Class locations</validCinemas>
+        <rewardProvider>VILLAGE CINEMAS</rewardProvider>
+        <rewardType>Village Cinemas Gold Class</rewardType>
+        <numberOfVouchers>
+            <vouchers>
+                <Count>3</Count>
+                <validPerson>Adult</validPerson>
+            </vouchers>
+            <vouchers>
+                <Count>3</Count>
+                <validPerson>Child</validPerson>
+            </vouchers>
+        </numberOfVouchers>
+        <numberOfRewards>1</numberOfRewards>
+        <rewardReferenceNumber>W6596040</rewardReferenceNumber>
+    </flyBuysLetter>
+</root>
