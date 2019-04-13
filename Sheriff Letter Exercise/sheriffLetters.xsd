@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:shl="http://www.cote.com.au/sheriffLetter" targetNamespace="http://www.cote.com.au/sheriffLetter" elementFormDefault="qualified" attributeFormDefault="unqualified" version="http://sheriffLetter/XMLSchema/1.0">
+	<xsd:element name="root">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="SheriffLetter">
+					<xsd:complexType mixed="true">
+						<xsd:sequence>
+							<xsd:element name="Prefix" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="Mr."/>
+										<xsd:enumeration value="Ms."/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="FirstName" type="xsd:string" minOccurs="1"/>
+							<xsd:element name="LastName" type="xsd:string" minOccurs="1"/>
+							<xsd:element name="MiddleName" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="JurorAddress" type="shl:Address" minOccurs="1"/>
+							<xsd:element name="IssueDate" type="xsd:string" minOccurs="1"/>
+							<xsd:element name="JurorNo" type="xsd:integer" minOccurs="1"/>
+							<xsd:element name="JurorIssueCode" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="PreceptNo" type="xsd:integer" minOccurs="1"/>
+							<xsd:element name="Juridiction" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="GOSFORD"/>
+										<xsd:enumeration value="PENRITH"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="JuridictionType" type="xsd:string" minOccurs="1"/>
+							<xsd:element name="CourtType" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="CRIMINAL"/>
+										<xsd:enumeration value="CIVIL"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="CourtAddress" type="shl:Address" minOccurs="0"/>
+							<xsd:element name="PanelType" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="A PANEL"/>
+										<xsd:enumeration value="B PANEL"/>
+										<xsd:enumeration value="C PANEL"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="DateOfAttendance" type="xsd:string" minOccurs="1"/>
+							<xsd:element name="DutyFromDate" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="DutyToDate" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="NoticeRefNo" type="xsd:string" minOccurs="1"/>
+							<xsd:element name="SheriffOfficeAddress" minOccurs="1">
+								<xsd:complexType mixed="true">
+									<xsd:sequence>
+										<xsd:element name="AddressType" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:enumeration value="PO Box"/>
+													<xsd:enumeration value="Locked Bag"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="NameOfBuilding" type="xsd:string" minOccurs="1"/>
+										<xsd:element name="Suburb" type="xsd:string" minOccurs="1"/>
+										<xsd:element name="PostCode" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:pattern value="[0-9]{4}"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="Telephone" type="xsd:string" minOccurs="1"/>
+										<xsd:element name="T.T.Y" type="xsd:string" minOccurs="1"/>
+										<xsd:element name="Fax" type="xsd:string" minOccurs="1" maxOccurs="2"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="TypeOfLetter" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="Failure to attend judy duty"/>
+										<xsd:enumeration value="Reason of non attendance at jury duty - accepted"/>
+										<xsd:enumeration value="Acknowledgement of correspondence"/>
+										<xsd:enumeration value="Application to be excused from judy duty - not accepted"/>
+										<xsd:enumeration value="Removal from jury roll - application declined"/>
+										<xsd:enumeration value="Application to be excused from jury duty"/>
+										<xsd:enumeration value="Non attendence request form"/>
+										<xsd:enumeration value="Remove from draft jurt roll form"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ************************************************************************************************ -->
+	<!--                                            GENERAL DEFENITIONS                                   -->
+	<!-- ************************************************************************************************ -->
+	<!-- Defenition of Address -->
+	<xsd:complexType name="Address" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="AddressLine1" type="xsd:string" minOccurs="1"/>
+			<xsd:element name="AddressLine2" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Suburb" type="xsd:string" minOccurs="1"/>
+			<xsd:element name="State" minOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="NSW|VIC|QLD|WA|SA|NT|ACT"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="PostCode" minOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="[0-9]{4}"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

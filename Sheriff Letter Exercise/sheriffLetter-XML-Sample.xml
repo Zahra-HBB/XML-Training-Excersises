@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shl:root xmlns:shl="http://www.cote.com.au/sheriffLetter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cote.com.au/sheriffLetter sheriffLetters.xsd">
+	<shl:SheriffLetter>
+		<shl:Prefix>Ms.</shl:Prefix>
+		<shl:FirstName>NICOLE</shl:FirstName>
+		<shl:LastName>PEITA</shl:LastName>
+		<shl:MiddleName>HOGAN</shl:MiddleName>
+		<shl:JurorAddress>
+			<shl:AddressLine1>3 LAW PLACE</shl:AddressLine1>
+			<shl:Suburb>BLUE HAVEN</shl:Suburb>
+			<shl:State>NSW</shl:State>
+			<shl:PostCode>2262</shl:PostCode>
+		</shl:JurorAddress>
+		<shl:IssueDate>29/05/2005</shl:IssueDate>
+		<shl:JurorNo>3571969</shl:JurorNo>
+		<shl:PreceptNo>50763</shl:PreceptNo>
+		<shl:Juridiction>GOSFORD</shl:Juridiction>
+		<shl:JuridictionType>DISTRICT</shl:JuridictionType>
+		<shl:CourtType>CRIMINAL</shl:CourtType>
+		<shl:PanelType>B PANEL</shl:PanelType>
+		<shl:DateOfAttendance>29/08/2005</shl:DateOfAttendance>
+		<shl:NoticeRefNo>1002 BLDR</shl:NoticeRefNo>
+		<shl:SheriffOfficeAddress>
+			<shl:AddressType>PO Box</shl:AddressType>
+			<shl:NameOfBuilding>A 4</shl:NameOfBuilding>
+			<shl:Suburb>Sydney South</shl:Suburb>
+			<shl:PostCode>1232</shl:PostCode>
+			<shl:Telephone>(02) 9209 8222</shl:Telephone>
+			<shl:T.T.Y>1800 469 889</shl:T.T.Y>
+			<shl:Fax>(02) 9287 7260 or (02) 9287 7222</shl:Fax>
+		</shl:SheriffOfficeAddress>
+		<shl:TypeOfLetter>Reason of non attendance at jury duty - accepted</shl:TypeOfLetter>
+	</shl:SheriffLetter>
+</shl:root>
